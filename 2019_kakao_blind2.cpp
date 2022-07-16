@@ -8,29 +8,26 @@ using namespace std;
 
 vector<string> solution(vector<string> record) {
     vector<string> answer;
-    string s1; string s2;
+    string command;
+    string uid; string uname;
     map<string, string> user;
     
-    for(int i = 0; i < record.size(); i++){
-        istringstream ss(record[i]);
-        getline(ss, s1, ' ');
-        if(s1 == "Enter"){
-            getline(ss, s1, ' ');
-            getline(ss, s2, ' ');
-            
-            user.insert({s1, s2});
-            user.find(s1)->second = s2;
-            
-            answer.push_back(s1 + "님이 들어왔습니다.");
+    for(auto line: record){
+        istringstream ss(line);
+        getline(ss, command, ' ');
+
+        if(command == "Leave"){
+            getline(ss, uid, ' ');
+            answer.push_back(uid + "님이 나갔습니다.");
         }
-        else if(s1 == "Leave"){
-            getline(ss, s1, ' ');
-            answer.push_back(s1 + "님이 나갔습니다.");
-        }
-        else if(s1 == "Change"){
-            getline(ss, s1, ' ');
-            getline(ss, s2, ' ');
-            user.find(s1)->second = s2;
+        else{
+            getline(ss, uid, ' ');
+            getline(ss, uname, ' ');
+            user.find(uid)->second = uname;
+            if(command == "Enter"){
+                user.insert({uid, uname});
+                answer.push_back(uid + "님이 들어왔습니다.");
+            }
         }
     }
     
