@@ -2,6 +2,29 @@
 // #include<iostream> 과 using namespace std;는 생략함
 
 // 2022.07.29
+// [참고] https://woo-dev.tistory.com/
+
+// # vector<string>을 sort할 경우
+// - 사전 순 정렬이 된다!
+
+// # string에서 공백없애기
+string str = "a b c";
+str.erase(remove(str.begin(), str.end(), ' '), str.end());
+
+// # string::find()
+#include<string> // string::find()
+string str = "abc";
+auto index = str.find("b");
+if(index != string::npos) cout << index;
+
+// # string 자르기
+문자열.substr(시작위치, 길이 = 끝);
+
+// # string <-> int
+string str = "123";
+int i = stoi(str);    // string->int
+str = to_string(i);   // int->string
+
 // # vector 원소 찾는법
 #include<algorithm> // std::find_if(), find()
 #include<veector>   // std::vector
