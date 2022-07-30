@@ -18,3 +18,17 @@ programmers 문제풀이 및 코딩테스트를 위한 C++ 스킬 정리
 
 </p>
 </details>
+
+
+```cpp
+#include <set>
+
+set<int> s;   // 비교연산자 사용가능
+s.insert(k);  // 자동 정렬하여 k 삽입. 중복시 삽입 실패 
+s.erase(iter);  // 반복자 위치 key 삭제. 다음 반복자 반환
+s.erase(start, end);  // [start,end) 범위의 key 모두 삭제
+s.find(k);  // k 위치 반복자 반환. 탐색 실패시 s.end()반환
+s.size();
+s.empty();
+s.clear();
+```
