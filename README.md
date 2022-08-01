@@ -119,7 +119,8 @@ for(int i = 2; i * i < prime.size(); i++){
 `next_permutation`를 사용하기 위해서 컨테이너는 반드시 오름차순으로 정렬되어 있어야한다. 중복을 제거하고 순열이 생성된다.</br>
 아래코드는 nP1부터 nPn까지 전부 구하는 과정이다. `set`은 중복을 허용하지 않기 때문에 유용하다.</br>
 `for문`을 추가하지 않고 각 `do문`에서 `numbers`를 `numset`에 삽입하면 nPn만 구할 수 있다.</br>
-string과 int를 적절히 사용하여 문제를 풀어보자. 
+string과 int를 적절히 사용하여 문제를 풀어보자. </br>
+`set`과 같은 associative container는 `next_permutation` 함수를 사용할 수 없다.
 
 ```cpp
 string numbers = "730";
