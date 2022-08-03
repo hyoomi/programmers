@@ -95,6 +95,53 @@ vec.erase(unique(vec.begin(), vec.end()), vec.end());
 
 </br>
 
+## algorithm
+### find
+범위 안 (first 부터 last 전 까지) 의 원소들 중 val 과 일치하는 첫 번째 원소를 가리키는 반복자를 리턴한다. 만일 일치하는 원소를 찾지 못할 경우 last 를 리턴한다. 이 때 val 의 타입 T 의 경우 operator== 가 정의되어 있어야만 한다. [참고](https://modoocode.com/261)
+```cpp
+// 정의
+InputIterator find(InputIterator first, InputIterator last, const T& val);
+```
+```cpp
+// 예시
+  std::vector<int> myvector(5, 1);
+  std::vector<int>::iterator it;
+  std::vector<int>::iterator mid = myvector.begin() + 2;
+
+  it = find(myvector.begin(), mid, 30);
+  if (it != mid)
+    std::cout << "Element found in myvector: " << *it << '\n';
+  else
+    std::cout << "Element not found in myvector\n";
+```
+
+
+</br>
+
+---
+
+</br>
+
+## string
+### substr
+문자열의 pos 번째 문자 부터 count 길이 만큼의 문자열을 리턴한다. count의 default값은 npos 이고, 자동으로 pos 부터 원래 문자열의 끝 까지 리턴한다.
+```cpp
+// 정의
+basic_string substr(size_type pos = 0, size_type count = npos) const;
+```
+```cpp
+// 예시
+string a = "0123456789abcde";
+string sub1 = a.substr(10); // "abcde"
+string sub2 = a.substr(5, 3);   // "567"
+```
+
+</br>
+
+---
+
+</br>
+
 ## 스킬
 ### 소수
 에라토스테네스의 체를 이용하여 효율적으로 소수를 구할 수 있다.</br> 
