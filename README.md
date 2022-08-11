@@ -142,6 +142,29 @@ string sub2 = a.substr(5, 3);   // "567"
 
 </br>
 
+## stringstream
+문자열에서 특정 자료형에 해당하는 정보만 추출할 때 유용하게 사용된다. 또한 공백과 엔터 기준으로 문자를 자를 수 있다. 
+[공식문서](https://cplusplus.com/reference/sstream/stringstream/) 
+[참고](https://life-with-coding.tistory.com/403) 
+[참고](https://m.blog.naver.com/kks227/220245263973)
+```cpp
+#include <sstream>
+
+int num;
+string str = "123 456 789";
+stringstream stream; 
+stream.str(str);
+while(stream >> num) cout << num << endl;
+stream.str(""); //초기화
+```
+
+
+</br>
+
+---
+
+</br>
+
 ## 스킬
 ### 소수
 에라토스테네스의 체를 이용하여 효율적으로 소수를 구할 수 있다.</br> 
