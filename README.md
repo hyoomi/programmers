@@ -262,8 +262,8 @@ int main() {
 
 </br>
 
-### 최대공약수와 최소공배수
-
+### 🌳 최대공약수와 최소공배수
+[참고](https://dnf-lover.tistory.com/entry/C-%EC%95%BD%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%95%BD%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EB%8A%94-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B0%A9%EB%B2%95%EA%B3%BC-%EC%86%8C%EC%9D%B8%EC%88%98%EB%B6%84%ED%95%B4)
 ```cpp
 #include <vector>
 
