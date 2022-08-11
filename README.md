@@ -259,3 +259,22 @@ int main() {
     } while (prev_permutation(temp.begin(), temp.end()));
 }
 ```
+
+</br>
+
+### 최대공약수와 최소공배수
+
+```cpp
+#include <vector>
+
+using namespace std;
+
+int gcd(int x, int y) { return x % y == 0 ? y : gcd(y, x % y); }
+int lcm(int x, int y) { return x * y / gcd(x, y); }
+int solution(vector<int> arr) {
+    int answer = arr[0];
+    for (int i = 1; i < arr.size(); i++)
+        answer = lcm(answer, arr[i]);
+    return answer;
+}
+```
